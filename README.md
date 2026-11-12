@@ -44,3 +44,10 @@ npm run build
 ## License
 
 MIT © 2026 SEN LLC
+
+<!-- sen-publish:links -->
+## Links
+
+- 🌐 Demo: https://sen.ltd/portfolio/tchoukaillon/
+- 📝 記事: https://qiita.com/sen-ltd/items/8a1c1d71d6b50adaa6f7
+<!-- /sen-publish:links -->
