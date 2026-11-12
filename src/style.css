@@ -1,0 +1,73 @@
+:root {
+  --bg: #141518;
+  --panel: #1d1f23;
+  --panel-2: #272a30;
+  --ink: #ecebe7;
+  --dim: #9c9fa6;
+  --line: #34373e;
+  --accent: #d9b45a;
+  --stone: #c9b48a;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font: 15px/1.6 ui-sans-serif, system-ui, -apple-system, 'Segoe UI', 'Hiragino Sans', sans-serif; }
+main { max-width: 1180px; margin: 0 auto; padding: 32px 24px 48px; }
+h1 { font-size: 34px; margin: 0 0 8px; letter-spacing: -0.01em; }
+h1 span { color: var(--accent); font-weight: 600; margin-left: 6px; }
+.sub { color: var(--dim); max-width: 88ch; margin: 0 0 20px; }
+.sub strong, .sub b { color: var(--ink); font-weight: 600; }
+.sub em { color: var(--ink); font-style: italic; }
+.win-t, .sub .win-t { color: #9be3b0; }
+.lose-t, .sub .lose-t { color: #ef6b7b; }
+.dim { color: var(--dim); }
+.small { font-size: 12.5px; line-height: 1.5; }
+#wrap { display: flex; gap: 28px; align-items: flex-start; flex-wrap: wrap; }
+.stage { flex: 1 1 640px; min-width: 0; }
+.side { flex: 0 1 420px; min-width: 300px; }
+h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--dim); font-weight: 600; margin: 0 0 10px; }
+h3 .dim { text-transform: none; letter-spacing: 0; font-weight: 400; }
+.controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+.sel { color: var(--dim); font-size: 13px; display: inline-flex; gap: 6px; align-items: center; }
+.chk { cursor: pointer; }
+select, button, input {
+  font: inherit; font-size: 13px; color: var(--ink); background: var(--panel-2);
+  border: 1px solid var(--line); border-radius: 8px; padding: 5px 10px;
+}
+select, button { cursor: pointer; }
+input { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; width: 14ch; }
+input[type='checkbox'] { width: auto; }
+input.bad { border-color: #ef6b7b; }
+button:hover:not(:disabled), select:hover { border-color: var(--dim); }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 18px; }
+canvas { width: 100%; height: auto; display: block; border-radius: 8px; }
+
+#board { overflow-x: auto; padding: 4px 0 8px; }
+#board .row { display: flex; gap: 8px; align-items: stretch; }
+.pit {
+  position: relative; flex: 0 0 auto; width: 58px; min-height: 92px; border-radius: 29px;
+  background: #24262b; border: 1px solid var(--line); color: var(--ink);
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  padding: 10px 4px 6px; cursor: default;
+}
+.pit.store { width: 70px; background: #2b2a24; border-color: #5a4f33; }
+.pit.legal { cursor: pointer; border-color: #8a7745; }
+.pit.best { border-color: #9be3b0; box-shadow: 0 0 0 1px #9be3b0 inset; }
+.pit.over { background: #2c1f22; border-color: #6b3a42; }
+.pit .cnt { font: 600 18px ui-monospace, SFMono-Regular, Menlo, monospace; }
+.pit .lab { margin-top: auto; font-size: 11px; color: var(--dim); }
+.pit .dots { display: flex; flex-wrap: wrap; gap: 3px; justify-content: center; max-width: 44px; margin: 4px 0; }
+.pit .dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--stone); display: block; }
+.pit .mk { position: absolute; top: -9px; right: -4px; font-weight: 700; font-size: 15px;
+  background: var(--panel); border-radius: 50%; width: 20px; height: 20px; line-height: 20px; text-align: center; }
+#status { margin-top: 10px; color: var(--dim); }
+#status b { font-weight: 600; }
+
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { padding: 3px 6px; border-bottom: 1px solid var(--line); text-align: left; }
+th { color: var(--dim); font-weight: 500; }
+td.num { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; text-align: right; }
+.chk-row { padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+.chk-row:last-child { border-bottom: none; }
+.chk-row b { font-weight: 600; }
+footer { margin-top: 28px; color: var(--dim); font-size: 13px; }
+footer a { color: var(--dim); }

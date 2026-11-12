@@ -1,0 +1,135 @@
+{
+ "seconds": 15.153,
+ "results": [
+  {
+   "id": "BL Fig.4 boards",
+   "status": "ok",
+   "text": "all 24 boards match"
+  },
+  {
+   "id": "BL Fig.4 harvest column",
+   "status": "diff",
+   "text": "s=24: printed 1, computed 4 (the bold entry in that row is pit 4)"
+  },
+  {
+   "id": "BL Thm 5 (one winning board per s)",
+   "status": "ok",
+   "text": "unplayed boards s<=3000 all winnable; exhaustive over all 3,628,800 boards with b_i<=i on 9 pits: exactly one winner for every s < s(10) = 34"
+  },
+  {
+   "id": "BL \"at most 21 stones\" (12-pit Ayo = 7 Tchoukaillon pits)",
+   "status": "ok",
+   "text": "s(8) - 1 = 21"
+  },
+  {
+   "id": "BL Fig.5 period table (i = 1..11)",
+   "status": "ok",
+   "text": "all 11 periods measured exactly as printed"
+  },
+  {
+   "id": "BL Prop 6 (period = lcm(1..i+1), first return to empty)",
+   "status": "ok",
+   "text": "measured for i = 1..21 (largest period 232,792,560)"
+  },
+  {
+   "id": "BL Introduction \"period of the first k pits is lcm(1..k+2)\"",
+   "status": "diff",
+   "text": "true only for k in {4,8,10,12,13,16,18,19,20} (where lcm(1..k+1) = lcm(1..k+2)); the table and Prop 6 say lcm(1..k+1)"
+  },
+  {
+   "id": "BL eqs. (1)-(2): p_i = i m_i - b_i, b_i = m_{i+1} + b_{i+1}, b_0 = s",
+   "status": "ok",
+   "text": "295,554 (s, i) pairs for s <= 4000 (the TeX prints b_i = Σ_{j>s} m_j; read j>i)"
+  },
+  {
+   "id": "BL Lemma 7 + Lemma 8 (m_i non-increasing)",
+   "status": "ok",
+   "text": "same range, 0 exceptions"
+  },
+  {
+   "id": "BL proof of Prop 6: j m_j = (j+2) m_{j+1} and 2 m_1 = kt at s = kt",
+   "status": "ok",
+   "text": "140 identities, 0 exceptions"
+  },
+  {
+   "id": "BL Remarks \"only lcm(1..i+1) of the (i+1)! prefixes occur\"",
+   "status": "ok",
+   "text": "distinct first-i-pit contents over one period: i=1: 2/2, i=2: 6/6, i=3: 12/12, i=4: 60/60, i=5: 60/60, i=6: 420/420, i=7: 840/840, i=8: 2520/2520, i=9: 2520/2520, i=10: 27720/27720"
+  },
+  {
+   "id": "BL §6 description of (h_s): first free term and every (j+2)-nd after it is j+1",
+   "status": "ok",
+   "text": "j = 0..39 on h_1..h_2,000,000"
+  },
+  {
+   "id": "BL Fig.8 sieve = s(n)",
+   "status": "ok",
+   "text": "first 200 outputs"
+  },
+  {
+   "id": "BL §6 recurrence for s(i)",
+   "status": "note",
+   "text": "as printed it starts with ceil(n/0) and names the result b^(i)_1; started at a^(1)_n = n with s(i) = a^(i)_1 it gives s(i) for i <= 2000 with 0 exceptions"
+  },
+  {
+   "id": "BL commented table s(1..17)",
+   "status": "ok",
+   "text": "17/17 match"
+  },
+  {
+   "id": "BL commented table n=2458",
+   "status": "diff",
+   "text": "printed s=1925270, exact s(2458) = 1923622; 1925270 is no s(n); s(2459) = 1925280; printed n²/s = 3.138 reproduces as 3.138 with the printed (n, s), the corrected pair gives 3.14068"
+  },
+  {
+   "id": "BL commented table n=3916",
+   "status": "diff",
+   "text": "printed s=4884658, exact s(3916) = 4882230; 4884658 = s(3917); printed n²/s = 3.139 reproduces as 3.139 with the printed (n, s), the corrected pair gives 3.14104"
+  },
+  {
+   "id": "BL commented table n=4690",
+   "status": "diff",
+   "text": "printed s=7003788, exact s(4690) = 7002012; 7003788 = s(4691); printed n²/s = 3.1406 reproduces as 3.1406 with the printed (n, s), the corrected pair gives 3.14194"
+  },
+  {
+   "id": "BL commented table n=8176",
+   "status": "diff",
+   "text": "printed s=21286434, exact s(8176) = 21277200; 21286434 = s(8177); printed n²/s = 3.1404 reproduces as 3.1404 with the printed (n, s), the corrected pair gives 3.14112"
+  },
+  {
+   "id": "BL Fig.7 caption p_{i,1925280} and \"calculations up to s = 21,286,434\"",
+   "status": "note",
+   "text": "1925280 = s(2459) (so the table's 1925270 is a one-digit slip), 21286434 = s(8177)"
+  },
+  {
+   "id": "BL Remarks occupancy 2/pi",
+   "status": "ok",
+   "text": "s(n) / (n(n+1)/2) at n = 1e8 is 0.636619778 vs 2/pi = 0.636619772 (the TeX writes i(i+1)/2 for n(n+1)/2)"
+  },
+  {
+   "id": "BL Thm 9 \"s(n) = n²/pi + O(n)\" (proof gap noted by Knuth, OEIS A002491)",
+   "status": "note",
+   "text": "(s(n) - n²/pi)/n for every n <= 40,000 lies in [-1.4241 (n=8190), 1.9509 (n=35841)]; on 503 samples up to 1e+8 in [-1.3307, 1.8671]"
+  },
+  {
+   "id": "JTT Thm 2.1 b_i = (s - Σ_{j<i} b_j) mod (i+1)",
+   "status": "ok",
+   "text": "every s <= 20,000 and 2006 more up to 2,000,000"
+  },
+  {
+   "id": "JTT Thm 3.2 (suffix sums ≡ 0 mod i)",
+   "status": "ok",
+   "text": "3,628,799 boards of length <= 9 agree, 0 disagree; 24 of the 33 winners contain an empty pit, so \"positive integers\" must be read as \"non-negative\""
+  },
+  {
+   "id": "JTT Thm 3.5 nested ceilings = s(l)",
+   "status": "ok",
+   "text": "l = 1..3000, 0 exceptions"
+  },
+  {
+   "id": "JTT Thm 3.6 l²/4 + O(l) <= s(l) <= l²/2 + O(l)",
+   "status": "ok",
+   "text": "l = 1..3000 (s(l) ~ l²/pi sits between)"
+  }
+ ]
+}
